@@ -1,0 +1,17 @@
+{
+  "name": "ds-command-line-utility",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Tyler Ho",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^21.2.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.2"
+  }
+}
