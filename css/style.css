@@ -1,0 +1,52 @@
+/* import variables from variables.css file */
+@import url(./partials/_variables.css);
+
+body {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+/* @media screen and (prefers-color-scheme: light) {
+  body {
+    background-color: white;
+    color: black;
+  }
+} */
+
+.navbar .navbar-brand {
+    color: var(--color-on-primary);
+}
+
+.navbar .nav-link .active {
+    color: var(--color-on-primary);
+}
+
+.navbar .nav-link {
+    color: var(--color-on-primary-variant);
+}
+
+.user-cell {
+    display: block;
+    padding: 6px 12px;
+    font-size: 14px;
+    min-height: 12em;
+    height: 100%;
+    line-height: 1.42857143;
+    color: var(--color-on-primary-container);
+    background-color: var(--color-primary-container);
+    background-image: none;
+    border-radius: 16px;
+}
+
+.terminal-box {
+    display: block;
+    padding: 6px 12px;
+    font-size: 14px;
+    min-height: 12em;
+    height: 100%;
+    line-height: 1.42857143;
+    color: var(--color-on-primary-container);
+    background-color: var(--color-primary-container);
+    background-image: none;
+    border-radius: 4px;
+}

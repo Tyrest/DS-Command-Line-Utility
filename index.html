@@ -7,13 +7,14 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
     <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Hello from Electron renderer!</title>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-sm">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="#">C++ Helper</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -37,15 +38,26 @@
         </div>
     </nav>
     <div class="container-fluid">
-        <h1>Hello from Electron renderer!</h1>
-        <p>Open the console to see the result of the script.</p>
+        <div class="row">
+            <div class="col">
+                <div class="user-cell">
+                    <h1>Relevant Files</h1>
+                    <ul id="file-list"></ul>
+                </div>
+            </div>
+            <div class="col">
+                <div class="user-cell">
+                    <h1>Compile & Run</h1>
+                    <button id="compile" class="btn btn-primary">Compile</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" id="run">
         <p>
             <button class="btn btn-primary" onclick="run()">Run</button>
         </p>
-        <p id="info"></p>
-        <ul id="file-list"></ul>
     </div>
-    <div class="container-fluid" id="run"></div>
 </body>
 <script src="./renderer.js"></script>
 
