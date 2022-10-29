@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm">
+    <nav class="navbar navbar-dark navbar-expand-sm">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">C++ Helper</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -22,41 +22,50 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active">Compile & Run</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link hover-underline-animation">Memory</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
+                        <a class="nav-link hover-underline-animation">Debugger</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled">Disabled</a>
+                        <a class="nav-link hover-underline-animation">Scratch Space</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col">
-                <div class="user-cell">
-                    <h1>Relevant Files</h1>
-                    <ul id="file-list"></ul>
+    <div class="interaction-boxes">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <div class="user-cell">
+                        <h1>Relevant Files</h1>
+                        <ul id="file-list"></ul>
+                        <button id="clear-files" class="btn btn-danger">Clear Files</button>
+                    </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="user-cell">
-                    <h1>Compile & Run</h1>
-                    <button id="compile" class="btn btn-primary">Compile</button>
+                <div class="col">
+                    <div class="user-cell">
+                        <h1>Compile & Run</h1>
+    
+                        <div id="command-display" class="terminal-box">
+                            No .cpp files detected!
+                        </div>
+    
+                        <button id="compile" class="btn btn-primary">Compile</button>
+                        <button id="run" class="btn btn-success">Run</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container-fluid" id="run">
-        <p>
-            <button class="btn btn-primary" onclick="run()">Run</button>
-        </p>
+    <div class="terminal">
+        <div class="container-fluid">
+            <div class="terminal-cell"></div>
+        </div>
     </div>
 </body>
 <script src="./renderer.js"></script>

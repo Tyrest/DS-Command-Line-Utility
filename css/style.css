@@ -17,36 +17,96 @@ body {
     color: var(--color-on-primary);
 }
 
-.navbar .nav-link .active {
+/* .navbar .nav-link .active {
     color: var(--color-on-primary);
 }
 
 .navbar .nav-link {
     color: var(--color-on-primary-variant);
+} */
+
+.navbar {
+  height: 10%
+}
+
+.interaction-boxes {
+  padding: 0px 6px;
+  height: 36%;
 }
 
 .user-cell {
-    display: block;
-    padding: 6px 12px;
-    font-size: 14px;
-    min-height: 12em;
-    height: 100%;
-    line-height: 1.42857143;
-    color: var(--color-on-primary-container);
-    background-color: var(--color-primary-container);
-    background-image: none;
-    border-radius: 16px;
+  position: absolute;
+  display: block;
+  padding: 6px 12px 18px 12px;
+  font-size: 14px;
+  height: calc(36% - 12px);
+  width: calc(50% - 30px);
+  line-height: 1.42857143;
+  color: var(--color-on-primary-container);
+  background-color: var(--color-primary-container);
+  background-image: none;
+  border-radius: 8px;
 }
 
 .terminal-box {
-    display: block;
-    padding: 6px 12px;
-    font-size: 14px;
-    min-height: 12em;
-    height: 100%;
-    line-height: 1.42857143;
-    color: var(--color-on-primary-container);
-    background-color: var(--color-primary-container);
-    background-image: none;
-    border-radius: 4px;
+  display: block;
+  padding: 6px 6px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: var(--color-on-terminal);
+  background-color: var(--color-terminal);
+  background-image: none;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.terminal {
+  padding: 6px 6px 12px 6px;
+  height: 54%;
+}
+
+.terminal-cell {
+  position: absolute;
+  padding: 6px 12px;
+  font-size: 14px;
+  height: calc(54% - 24px);
+  width: calc(100% - 36px);
+  line-height: 1.42857143;
+  color: var(--color-on-terminal);
+  background-color: var(--color-terminal);
+  border-radius: 8px;
+}
+
+/* .navbar .nav-item .active {
+  content: '';
+  position: relative;
+  width: calc(100% - 16px);
+  transform: scaleX(1);
+  height: 2px;
+  bottom: 4px;
+  left: 8px;
+  background-color: var(--color-on-primary);
+} */
+
+.hover-underline-animation {
+  position: relative;
+  text-decoration: none;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: calc(100% - 16px);
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 4px;
+  left: 8px;
+  background-color: var(--color-on-primary);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }

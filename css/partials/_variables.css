@@ -8,9 +8,9 @@ html, body {
 :root {
     --color-primary: #082032;
     --color-primary-container: #2C394B;
+    --color-terminal: #1E1E1E;
     --color-border: #334756;
-    /* --color-on-primary: #FF4C29; */
-    --color-on-primary: #FFFFFF;
+    --color-on-primary: #FF4C29;
     --color-on-primary-container: #FFFFFF;
-    --color-
+    --color-on-terminal: #c2c2c2;
 }
