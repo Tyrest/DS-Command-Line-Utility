@@ -4,14 +4,19 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "rebuild": "electron-rebuild -f -w node-pty"
   },
   "author": "Tyler Ho",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^21.2.0"
+    "electron": "^21.2.0",
+    "electron-rebuild": "^3.2.9"
   },
   "dependencies": {
-    "bootstrap": "^5.2.2"
+    "bootstrap": "^5.2.2",
+    "node-pty": "^0.10.1",
+    "xterm": "^5.0.0",
+    "xterm-addon-fit": "^0.6.0"
   }
 }

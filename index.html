@@ -7,8 +7,11 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
     <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/xterm/css/xterm.css" />
+    <script src="node_modules/xterm/lib/xterm.js"></script>
+
     <link rel="stylesheet" href="./css/style.css">
-    <title>Hello from Electron renderer!</title>
+    <title>C++ Helper</title>
 </head>
 
 <body>
@@ -50,24 +53,27 @@
                 <div class="col">
                     <div class="user-cell">
                         <h1>Compile & Run</h1>
-    
-                        <div id="command-display" class="terminal-box">
+                        <div id="compile-container" class="terminal-box">
                             No .cpp files detected!
                         </div>
-    
                         <button id="compile" class="btn btn-primary">Compile</button>
+                        <!-- <div id="run-container" class="terminal-box">
+                            No .cpp files detected!
+                        </div> -->
                         <button id="run" class="btn btn-success">Run</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="terminal">
+    <div class="terminal-display">
         <div class="container-fluid">
-            <div class="terminal-cell"></div>
+            <div id="terminal" class="terminal-cell">
+            </div>
         </div>
     </div>
 </body>
+<script src="./js/terminal.js"></script>
 <script src="./renderer.js"></script>
 
 </html>
